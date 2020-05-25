@@ -1,6 +1,6 @@
-package com.demo.repository;
+package com.blog.blogservice.repository;
 
-import com.demo.domain.User;
+import com.blog.blogservice.domain.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

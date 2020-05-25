@@ -1,9 +1,9 @@
-package com.demo.services;
+package com.blog.blogservice.services;
 
-import com.demo.domain.User;
-import com.demo.dto.UserDTO;
-import com.demo.repository.UserRepository;
-import com.demo.services.exception.ObjectNotFoundException;
+import com.blog.blogservice.domain.User;
+import com.blog.blogservice.dto.UserDTO;
+import com.blog.blogservice.repository.UserRepository;
+import com.blog.blogservice.services.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

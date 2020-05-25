@@ -1,7 +1,7 @@
-package com.demo.resources;
+package com.blog.blogservice.controllers;
 
-import com.demo.domain.Post;
-import com.demo.services.PostService;
+import com.blog.blogservice.domain.Post;
+import com.blog.blogservice.services.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

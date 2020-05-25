@@ -1,6 +1,6 @@
-package com.demo.domain;
+package com.blog.blogservice.domain;
 
-import com.demo.dto.AuthorDTO;
+import com.blog.blogservice.dto.AuthorDTO;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

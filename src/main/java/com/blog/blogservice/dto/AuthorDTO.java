@@ -1,6 +1,6 @@
-package com.demo.dto;
+package com.blog.blogservice.dto;
 
-import com.demo.domain.User;
+import com.blog.blogservice.domain.User;
 
 import java.io.Serializable;
 

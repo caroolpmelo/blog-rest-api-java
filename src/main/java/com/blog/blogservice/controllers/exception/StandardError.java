@@ -1,4 +1,4 @@
-package com.demo.resources.exception;
+package com.blog.blogservice.controllers.exception;
 
 import java.io.Serializable;
 

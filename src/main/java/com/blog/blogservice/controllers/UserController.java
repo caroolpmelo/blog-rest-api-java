@@ -1,9 +1,9 @@
-package com.demo.resources;
+package com.blog.blogservice.controllers;
 
-import com.demo.domain.Post;
-import com.demo.domain.User;
-import com.demo.dto.UserDTO;
-import com.demo.services.UserService;
+import com.blog.blogservice.domain.Post;
+import com.blog.blogservice.domain.User;
+import com.blog.blogservice.dto.UserDTO;
+import com.blog.blogservice.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

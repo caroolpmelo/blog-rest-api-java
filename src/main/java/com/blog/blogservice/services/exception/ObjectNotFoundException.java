@@ -1,4 +1,4 @@
-package com.demo.services.exception;
+package com.blog.blogservice.services.exception;
 
 public class ObjectNotFoundException extends RuntimeException {
 

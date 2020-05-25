@@ -1,6 +1,6 @@
-package com.demo.resources.exception;
+package com.blog.blogservice.controllers.exception;
 
-import com.demo.services.exception.ObjectNotFoundException;
+import com.blog.blogservice.services.exception.ObjectNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

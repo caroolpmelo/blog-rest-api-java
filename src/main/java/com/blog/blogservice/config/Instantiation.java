@@ -1,10 +1,10 @@
-package com.demo.config;
+package com.blog.blogservice.config;
 
-import com.demo.domain.Post;
-import com.demo.domain.User;
-import com.demo.dto.AuthorDTO;
-import com.demo.repository.PostRepository;
-import com.demo.repository.UserRepository;
+import com.blog.blogservice.repository.UserRepository;
+import com.blog.blogservice.domain.Post;
+import com.blog.blogservice.domain.User;
+import com.blog.blogservice.dto.AuthorDTO;
+import com.blog.blogservice.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;

@@ -1,8 +1,8 @@
-package com.demo.services;
+package com.blog.blogservice.services;
 
-import com.demo.domain.Post;
-import com.demo.repository.PostRepository;
-import com.demo.services.exception.ObjectNotFoundException;
+import com.blog.blogservice.services.exception.ObjectNotFoundException;
+import com.blog.blogservice.domain.Post;
+import com.blog.blogservice.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
