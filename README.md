@@ -15,6 +15,6 @@ Usando o <b>IntelliJ IDEA</b>:
 <ul>
   <li>No terminal, rode o servidor mongo através do comando: `mongod`</li>
   <li>No IDEA, aperte o botão de "Play" `▶️`</li>
-  <li>Observe em qual porta a aplicação irá rodar e digite no browser a rota correspondente encontrada no controller em `src/main/java/com/demo/resources/UserController.java`</li>
+  <li>Observe em qual porta a aplicação irá rodar e digite no browser a rota correspondente encontrada no controller em `src/main/java/com/blog/blogservice/resources/UserController.java`</li>
    <li>Ex: listar todos os usuários -> `http://localhost:8080/users`</li>
 </ul>

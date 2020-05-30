@@ -1,10 +1,11 @@
 package com.blog.blogservice.config;
 
-import com.blog.blogservice.repository.UserRepository;
+import com.blog.blogservice.dto.CommentDTO;
+import com.blog.blogservice.repository.IUserRepository;
 import com.blog.blogservice.domain.Post;
 import com.blog.blogservice.domain.User;
 import com.blog.blogservice.dto.AuthorDTO;
-import com.blog.blogservice.repository.PostRepository;
+import com.blog.blogservice.repository.IPostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
@@ -17,24 +18,24 @@ import java.util.TimeZone;
 public class Instantiation implements CommandLineRunner {
 
     @Autowired
-    private UserRepository userRepository;
+    private IUserRepository IUserRepository;
 
     @Autowired
-    private PostRepository postRepository;
+    private IPostRepository IPostRepository;
 
     @Override
     public void run(String... args) throws Exception {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
 
-        userRepository.deleteAll();
-        postRepository.deleteAll();
+        IUserRepository.deleteAll();
+        IPostRepository.deleteAll();
 
         User steven = new User(null, "Steven", "steven@crystal.gem");
         User connie = new User(null, "Connie", "connie@crystal.gem");
         User pearl = new User(null, "Pearl", "pearl@crystal.gem");
 
-        userRepository.saveAll(Arrays.asList(steven, connie, pearl));
+        IUserRepository.saveAll(Arrays.asList(steven, connie, pearl));
 
         Post post1 = new Post(
                 null,
@@ -51,12 +52,31 @@ public class Instantiation implements CommandLineRunner {
                 new AuthorDTO(pearl)
         );
 
-        postRepository.saveAll(Arrays.asList(post1, post2));
+        CommentDTO c1 = new CommentDTO(
+                "Quero ver você se transformar numa mulher gigante!",
+                sdf.parse("24/05/2020"),
+                new AuthorDTO(connie)
+        );
+        CommentDTO c2 = new CommentDTO(
+                "Quais desses cristais seriam mais forte que você? Rs",
+                sdf.parse("24/05/2020"),
+                new AuthorDTO(pearl)
+        );
+        CommentDTO c3 = new CommentDTO(
+                "Paz e amor cristal <3",
+                sdf.parse("24/05/2020"),
+                new AuthorDTO(steven)
+        );
+
+        post1.getComments().addAll(Arrays.asList(c1, c2));
+        post2.getComments().addAll(Arrays.asList(c3));
+
+        IPostRepository.saveAll(Arrays.asList(post1, post2));
 
         steven.getPosts().addAll(Arrays.asList(post1));
         pearl.getPosts().addAll(Arrays.asList(post2));
-        userRepository.save(steven);
-        userRepository.save(pearl);
+        IUserRepository.save(steven);
+        IUserRepository.save(pearl);
     }
 
 }

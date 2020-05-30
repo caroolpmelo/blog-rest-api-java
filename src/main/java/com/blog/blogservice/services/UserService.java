@@ -2,7 +2,7 @@ package com.blog.blogservice.services;
 
 import com.blog.blogservice.domain.User;
 import com.blog.blogservice.dto.UserDTO;
-import com.blog.blogservice.repository.UserRepository;
+import com.blog.blogservice.repository.IUserRepository;
 import com.blog.blogservice.services.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.util.Optional;
 public class UserService {
 
     @Autowired
-    private UserRepository repo;
+    private IUserRepository repo;
 
     public List<User> findAll() {
         return repo.findAll();
